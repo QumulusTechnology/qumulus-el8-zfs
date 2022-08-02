@@ -30,7 +30,7 @@ spec:
       steps {
         container(name: 'qumulus-centos-jnlp', shell: '/bin/bash') {
           sh '''
-          VERSION=2.1.4
+          VERSION=2.1.5
           git clone https://github.com/openzfs/zfs.git -b zfs-$VERSION
           cd zfs
           sh ./autogen.sh
