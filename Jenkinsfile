@@ -6,8 +6,10 @@ kind: Pod
 spec:
   containers:
   - name: qumulus-centos-jnlp
-    image: qumulus/jenkins-inbound-agent-centos-stream8:1.0.1
+    image: repo.qumulus.io/jenkins/jenkins-inbound-agent-centos-stream8:latest
     imagePullPolicy: IfNotPresent
+    imagePullSecrets:
+      - name: "qumulus-repo-docker-credentials"
     resources:
       limits:
         cpu: "2000m"
