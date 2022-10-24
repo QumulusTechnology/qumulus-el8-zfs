@@ -30,7 +30,7 @@ spec:
         container(name: 'qumulus-centos-jnlp', shell: '/bin/bash') {
           withCredentials([usernamePassword(credentialsId: 'packagecloud-credentials', usernameVariable: 'PACKAGECLOUD_USERNAME', passwordVariable: 'PACKAGECLOUD_TOKEN')]) {
             sh '''
-            VERSION=2.1.5
+            VERSION=2.1.6
             git clone https://github.com/openzfs/zfs.git -b zfs-$VERSION
             cd zfs
             sh ./autogen.sh
