@@ -8,8 +8,6 @@ spec:
   - name: qumulus-centos-jnlp
     image: repo.qumulus.io/jenkins/jenkins-inbound-agent-centos-stream8:latest
     imagePullPolicy: IfNotPresent
-    imagePullSecrets:
-    - name: qumulus-repo-docker-credentials
     resources:
       limits:
         cpu: "2000m"
@@ -21,6 +19,8 @@ spec:
     - sleep
     args:
     - 9999999
+  imagePullSecrets:
+  - name: qumulus-repo-docker-credentials
 """
     }
   }
